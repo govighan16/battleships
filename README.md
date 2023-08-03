@@ -5,14 +5,6 @@ implementation of a single-player [Battleship][battleship] game! You'll be
 utilizing your knowledge of event listeners to create an interactive Battleship
 game board.
 
-## Set Up
-
-Clone the practice from the [starter].
-
-## Background and Context
-
-See details of the [Battleship][battleship] game here if you are not familiar
-with the game.
 
 You will be creating a **single-player** Battleship game on the browser.
 
@@ -114,53 +106,5 @@ no message.
 The user should be able to click the reset button to reset the game regardless
 of if the game is over.
 
-Here's what it should look like **before** the reset button is clicked:
 
-![before-reset-example]
 
-Here's what it should look like **after** the reset button is clicked:
-
-![after-reset-example]
-
-By the end of this phase, you should have a barebones version of a single
-player Battleship running! If you have time, continue on to the bonus section.
-
-## Bonus Phase 1: Computer player
-
-To implement a computer player, you will have to create a `ComputerPlayer` and
-`HumanPlayer` class to separate the game logic/actions for each.
-
-Two boards should now be generated and the computer should make a random move
-after the user makes a move. To make sure the computer doesn't repeat moves,
-the game state must be more sophisticated than just the number of squares
-remaining.
-
-Also, keep in mind that the user should not be able to click on their own
-board.
-
-## Bonus Phase 2: Choosing Ship Placement
-
-Refactor the board initialization process so that the user can select where
-to place their pieces. This can be done either by submitting a form indicating
-the ship locations, or implement draggable pieces on the board. This may be
-a bit more ambitious, but look in the [draggable] HTML property and the
-[drag and drop API] if you're interested!
-
-## Bonus Phase 3: Custom custom custom
-
-Introduce a "setup" phase, where each player can choose the board size and
-ship sizes.
-
-More validation will be needed to make sure your board can support the ships
-you want to add!
-
-[starter]: https://github.com/appacademy/practice-for-week-09-battleship-dom
-[battleship]: http://en.wikipedia.org/wiki/Battleship_%28game%29
-[layout-example]: https://appacademy-open-assets.s3.us-west-1.amazonaws.com/Modular-Curriculum/content/week-09/practice-battleship-dom/battleship-layout.png
-[board-example]: https://appacademy-open-assets.s3.us-west-1.amazonaws.com/Modular-Curriculum/content/week-09/practice-battleship-dom/battleship-board.png
-[game-over-message-example]: https://appacademy-open-assets.s3.us-west-1.amazonaws.com/Modular-Curriculum/content/week-09/practice-battleship-dom/battleship-game-over-message.png
-[before-reset-example]: https://appacademy-open-assets.s3.us-west-1.amazonaws.com/Modular-Curriculum/content/week-09/practice-battleship-dom/battleship-before-reset.png
-[after-reset-example]: https://appacademy-open-assets.s3.us-west-1.amazonaws.com/Modular-Curriculum/content/week-09/practice-battleship-dom/battleship-after-reset.png
-[http://localhost:5000]: http://localhost:5000
-[draggable]: https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/draggable
-[drag and drop API]: https://developer.mozilla.org/en-US/docs/Web/API/HTML_Drag_and_Drop_API
