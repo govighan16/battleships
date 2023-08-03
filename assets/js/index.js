@@ -11,6 +11,20 @@ console.log(board.grid);
 //Visualisation of the board
     const boardElement = document.createElement("div");
     boardElement.classList.add("board");
+
+    const handleCellClick = event => {
+        const cellElement = event.target
+        const value = board.makeHit(event.target.dataset.row, event.target.dataset.col);
+      
+        if (value === null) {
+          
+          cellElement.classList.add("miss");
+        } else {
+          
+          cellElement.classList.add("hit");
+          cellElement.innerText = value;
+        }
+    }
   
     for (let i = 0; i < board.grid.length; i++) {
       const rowElement = document.createElement("div");
@@ -22,7 +36,7 @@ console.log(board.grid);
         cellElement.setAttribute("data-row", i);
         cellElement.setAttribute("data-col", j);
 
-        cellElement.addEventListener("click", () => handleCellClick(i, j));
+        cellElement.addEventListener("click", handleCellClick);
   
         rowElement.appendChild(cellElement);
       }
@@ -32,24 +46,6 @@ console.log(board.grid);
   
     document.body.appendChild(boardElement);
 
-    function handleCellClick(row, col) {
-        const cellElement = document.querySelector(`[data-row="${row}"][data-col="${col}"]`);
-        const value = board.makeHit(row, col);
-      
-        if (value === null) {
-          
-          cellElement.classList.add("miss");
-        } else {
-          
-          cellElement.classList.add("hit");
-          cellElement.innerText = value;
-        }
-      
-        
-        if (board.isGameOver()) {
-          
-        }
-      }
       
 
 
