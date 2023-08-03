@@ -53,6 +53,34 @@ for (let j = 0; j < board.grid[i].length; j++) {
   
 document.body.appendChild(boardElement);
 
+const resetButton = document.createElement('button')
+resetButton.innerText = 'RESET'
+document.body.appendChild(resetButton)
+resetButton.addEventListener('click', event => {
+    boardElement.innerHTML = ''
+    board = new Board()
+
+    for (let i = 0; i < board.grid.length; i++) {
+        const rowElement = document.createElement("div");
+        rowElement.classList.add("row");
+      
+    for (let j = 0; j < board.grid[i].length; j++) {
+        const cellElement = document.createElement("div");
+        cellElement.classList.add("cell");
+        cellElement.setAttribute("data-row", i);
+        cellElement.setAttribute("data-col", j);
+    
+        cellElement.addEventListener("click", handleCellClick);
+      
+        rowElement.appendChild(cellElement);
+        }
+      
+        boardElement.appendChild(rowElement);
+    }
+
+})
+
+
       
 
 
